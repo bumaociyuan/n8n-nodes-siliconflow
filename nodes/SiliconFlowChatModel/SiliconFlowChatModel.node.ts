@@ -278,6 +278,7 @@ export class SiliconFlowChatModel implements INodeType {
 
 		const configuration: ClientOptions = {
 			baseURL: credentials.baseUrl,
+			apiKey: credentials.apiKey,
 		};
 
 		// Prepare model kwargs for SiliconFlow specific features
@@ -309,6 +310,7 @@ export class SiliconFlowChatModel implements INodeType {
 		}
 
 		const model = new ChatOpenAI({
+			apiKey: credentials.apiKey,
 			openAIApiKey: credentials.apiKey,
 			model: modelName,
 			maxTokens: options.maxTokens || -1,
