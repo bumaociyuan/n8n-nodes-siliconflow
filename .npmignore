@@ -1,0 +1,32 @@
+# npm 发布时忽略的文件
+# 注意：从 Git 安装时，npm 会使用 .gitignore，但我们需要确保源代码被包含
+
+# 开发文件
+*.log
+.DS_Store
+.env
+.vscode
+.idea
+
+# 文档（保留 README.md 和 LICENSE.md）
+AI_AGENT_FIX.md
+API_PARAMETERS_ENHANCEMENT.md
+IMPLEMENTATION_SUMMARY.md
+TESTING.md
+TOOLS_CALLING_UPDATE.md
+USAGE.md
+
+# 脚本（发布时不需要）
+scripts/prepare-release.*
+scripts/publish-to-github.*
+
+# 开发依赖构建产物会自动生成
+node_modules
+package-lock.json
+
+# 但保留源代码
+!nodes/
+!credentials/
+!scripts/copy-assets.js
+!tsconfig.json
+
