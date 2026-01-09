@@ -40,7 +40,6 @@
 		"format": "prettier nodes credentials --write",
 		"lint": "eslint nodes credentials --ext .ts",
 		"lint:fix": "eslint nodes credentials --ext .ts --fix",
-		"prepare": "npm run build",
 		"prepublishOnly": "npm run build"
 	},
 	"files": [
